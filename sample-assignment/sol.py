@@ -5,6 +5,7 @@
 # This function takes in one number and returns one number."""
 
 def main():
+    """This is our main function"""
     data = input()
     print(int(data[0])+int(data[1]))
 
