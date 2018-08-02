@@ -25,7 +25,7 @@ def main():
                 counter_i = counter_i + 1
                 counter_j = counter_j + 1
         if equals_flag == 1:
-                count_value = count_value + 1
+            count_value = count_value + 1
         start_value = start_value + 1
         end_value = end_value + 1
     print(count_value)
