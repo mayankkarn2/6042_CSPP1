@@ -11,7 +11,7 @@ def main():
    This program counts the number 
    of vowels in given string
   '''
-STR_INPUT = input("Enter a string ")
+STR_INPUT = input()
 VOWEL_COUNT = 0
 STR_INPUT = STR_INPUT.lower()
 for char in STR_INPUT:
