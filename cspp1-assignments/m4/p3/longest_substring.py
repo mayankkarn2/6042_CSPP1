@@ -42,10 +42,7 @@ def main():
             LENGTH = COUNT
             TEMP_1 = ""
             TEMP_1 = TEMP
-    if LENGTH == 1:
-        print("No sequence found")
-    else:
-        print(TEMP_1)
+    print(TEMP_1)
 
 
 if __name__ == "__main__":
