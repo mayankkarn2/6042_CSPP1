@@ -1,7 +1,8 @@
-num=int(input("Enter a number"))
-sum=0
-count=1
-while(count<=num):
-	sum=sum+count
-	count=count+1
-print(sum)
+"""This a program to print natural numbers upto n by using while loop"""
+NUM = int(input("Enter a number"))
+SUM = 0
+COUNT = 1
+while COUNT <= NUM:
+    SUM = SUM + COUNT
+    COUNT = COUNT + 1
+print(SUM)
