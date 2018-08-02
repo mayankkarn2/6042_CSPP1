@@ -5,7 +5,15 @@
 #Number of vowels: 5
 
 def main():
-	s = raw_input()
+"""This program counts the number of vowels in the given string"""
+STR_INPUT = input("Enter a string ")
+VOWEL_COUNT = 0
+STR_INPUT = STR_INPUT.lower()
+for char in STR_INPUT:
+    if char in "aeiou":
+        VOWEL_COUNT = VOWEL_COUNT + 1
+print(VOWEL_COUNT)
+
 	# the input string is in s
 	# remove pass and start your code here
 	pass
