@@ -28,7 +28,7 @@ def main():
     while MOV_VAL <= LEN-1:
         COUNT = 1
         TEMP = STRING_A[BEG_VAL]
-        while STRING_A[BEG_VAL] < STRING_A[MOV_VAL] and MOV_VAL < LEN:
+        while STRING_A[BEG_VAL] <= STRING_A[MOV_VAL] and MOV_VAL < LEN:
             COUNT = COUNT + 1
             TEMP = TEMP+STRING_A[MOV_VAL]
             BEG_VAL = MOV_VAL
