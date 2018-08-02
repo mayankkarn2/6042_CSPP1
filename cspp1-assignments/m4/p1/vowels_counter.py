@@ -7,10 +7,10 @@
 #Number of vowels: 5
 
 def main():
-  '''
-   This program counts the number 
-   of vowels in given string
-  '''
+    '''
+        This program counts the number 
+        of vowels in given string
+    '''
 STR_INPUT = input()
 VOWEL_COUNT = 0
 STR_INPUT = STR_INPUT.lower()
