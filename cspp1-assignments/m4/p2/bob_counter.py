@@ -6,8 +6,8 @@ then your program should print
 Number of times bob occurs is: 2'''
 
 def main():
-   '''This programs counts the nimber of 
-      instances of the string 'Bob' in the given string'''
+    '''This programs counts the nimber of 
+    instances of the string 'Bob' in the given string'''
     STR_INPUT = input()
     CHECK_STRING = 'bob'
     STR_LEN = len(STR_INPUT)
@@ -24,11 +24,11 @@ def main():
             else:
                 COUNTER_I = COUNTER_I + 1
                 COUNTER_J = COUNTER_J + 1
-            if EQUALS_FLAG == 1:
-        COUNT_VALUE = COUNT_VALUE + 1
+        if EQUALS_FLAG == 1:
+                COUNT_VALUE = COUNT_VALUE + 1
         START_VALUE = START_VALUE + 1
         END_VALUE = END_VALUE + 1
-print(COUNT_VALUE)
+    print(COUNT_VALUE)
 
 if __name__ == "__main__":
     main()
