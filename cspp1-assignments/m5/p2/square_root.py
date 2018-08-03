@@ -21,7 +21,5 @@ def main():
         print(num)
     else:
         print(guess)
-    
-
 if __name__ == "__main__":
     main()
