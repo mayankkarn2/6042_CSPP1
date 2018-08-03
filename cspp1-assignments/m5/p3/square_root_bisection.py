@@ -22,7 +22,7 @@ def main():
         elif mid * mid > input_n:
             high = mid
         else:
-            low = mid   
+            low = mid
     print(mid)
 if __name__ == "__main__":
     main()
