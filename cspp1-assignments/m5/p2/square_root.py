@@ -15,7 +15,7 @@ def main():
     step = 0.1
     num = int(input())
     guess = 0.0
-    while abs((guess**2) - num ) >= epsilon:
+    while abs((guess**2) - num) >= epsilon:
         guess = guess + step
     if abs((guess**2) - num) >= epsilon:
         print(num)
