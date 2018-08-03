@@ -10,6 +10,8 @@
 # Output: 21950 is not a perfect cube
 
 def main():
+	'''This program checks if a number is 
+		perfect cube or not'''
 	INPUT_N = int(input())
 	FOUND_FLAG = 0
 	for x in range(1,INPUT_N+1,1):
