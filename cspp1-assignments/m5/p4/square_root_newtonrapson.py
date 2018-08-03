@@ -10,15 +10,14 @@
 # output: 6.999999999999991
 
 def main():
-	input_n = int(input())
-	guess_n=input_n/2
-	diff=0.01
-	while 1:
-		if abs(guess_n*guess_n-input_n)>=diff:
-			guess_n=((guess_n) - ((guess_n*guess_n-input_n)/(2 *(guess_n))))
-		else:
-			break;
-	print(guess_n)
-
+    input_n = int(input())
+    guess_n=input_n/2
+    diff=0.01
+    while 1:
+        if abs(guess_n*guess_n-input_n)>=diff:
+            guess_n = ((guess_n) - ((guess_n*guess_n-input_n)/(2 *(guess_n))))
+        else:
+            break;
+    print(guess_n)
 if __name__ == "__main__":
-	main()
+    main()
