@@ -11,7 +11,8 @@
 
 def main():
     '''This program checks if a number is
-        perfect cube or not'''
+        perfect cube or not
+    '''
     input_n = int(input())
     found_flag = 0
     for x_i in range(1, input_n+1, 1):
