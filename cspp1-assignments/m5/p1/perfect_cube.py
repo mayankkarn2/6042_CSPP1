@@ -1,4 +1,4 @@
-# Write a python program to find if the given number is a perfect cube or not
+'''Write a python program to find if the given number is a perfect cube or not
 # using guess and check algorithm
 
 # testcase 1
@@ -7,7 +7,7 @@
 
 # testcase 2
 # Input: 21950
-# Output: 21950 is not a perfect cube
+# Output: 21950 is not a perfect cube'''
 
 def main():
     '''This program checks if a number is
