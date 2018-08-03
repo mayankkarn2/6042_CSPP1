@@ -21,7 +21,7 @@ def main():
 	if FOUND_FLAG == 1:
 		print(str(INPUT_N)+" is a perfect cube")
 	else:
-		print(str(INPUT_N)+" is a perfect cube")
+		print(str(INPUT_N)+" is a not perfect cube")
 
 if __name__ == "__main__":
 	main()
