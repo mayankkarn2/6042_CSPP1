@@ -14,7 +14,7 @@ def main():
         perfect cube or not'''
     input_n = int(input())
     found_flag = 0
-    for x in range(1, INPUT_N+1, 1):
+    for x in range(1, input_n+1, 1):
         if x*x*x == input_n:
             found_flag = 1
             break
