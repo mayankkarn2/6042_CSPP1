@@ -12,18 +12,19 @@
 def main():
     '''This program checks if a number is
         perfect cube or not'''
-    INPUT_N = int(input())
-    FOUND_FLAG = 0
+    input_n = int(input())
+    found_flag = 0
     for x in range(1, INPUT_N+1, 1):
-        if x*x*x == INPUT_N:
-            FOUND_FLAG = 1
+        if x*x*x == input_n:
+            found_flag = 1
             break
         else:
-            FOUND_FLAG = 0
-    if FOUND_FLAG == 1:
-        print(str(INPUT_N)+" is a perfect cube")
+            found_flag = 0
+    if found_flag == 1:
+        print(str(input_n)+" is a perfect cube")
     else:
-        print(str(INPUT_N)+" is not a perfect cube")
+        print(str(input_n)+" is not a perfect cube")
+
 
 if __name__ == "__main__":
     main()
