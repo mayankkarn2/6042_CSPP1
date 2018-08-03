@@ -11,10 +11,10 @@
 
 def main():
     '''This program prints square root'''
-    input_n=int(input())
-    low=0
-    high=input_n
-    diff=0.01
+    input_n = int(input())
+    low = 0
+    high = input_n
+    diff = 0.01
     while 1:
         mid = (low + high)/2
         if mid * mid >= (input_n-diff) and mid * mid <= (input_n+diff):
