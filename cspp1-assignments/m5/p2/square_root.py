@@ -10,12 +10,18 @@
 # output: 6.999999999999991
 
 def main():
-	s = raw_input()
-	# epsilon and step are initialized
-	# don't change these values
+	
 	epsilon = 0.01
 	step = 0.1
-	# your code starts here
+	num = int(input())
+	guess = 0.0
+	while abs((guess**2) - num ) >= epsilon:
+		guess = guess + step
+	if abs((guess**2) - num) >= epsilon:
+		print(num)
+	else:
+		print(guess)
+	
 
 if __name__== "__main__":
 	main()
