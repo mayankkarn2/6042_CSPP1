@@ -10,7 +10,7 @@
 # output: 6.999999999999991
 
 def main():
-    
+    '''This programn is square root'''
     epsilon = 0.01
     step = 0.1
     num = int(input())
