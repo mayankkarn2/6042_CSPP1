@@ -11,14 +11,9 @@ def main():
     LEN = len(str_input)
     new = list(str_input)
     for x in range(LEN):
-    	if (new[x] >= 'a' and new[x] <= 'z') or (new[x] >= 'A' and new[x] <= 'Z'):
-    		new[x] = new[x]
-    	elif new[x] >= '0' and new[x] <= '9':
-    		new[x] = new[x]
-    	else:
-    		new[x] = " "
+    	if new[x] == '!' or new[x] == '@' or new[x] == '#' or new[x] == '$' or new[x] == '%' or new[x] == '^' or new[x] == '&' or new[x] == '*':
+    		new[x] = ' '
     str_input=''.join(new)
     print(str_input)
-
 if __name__ == "__main__":
     main()
