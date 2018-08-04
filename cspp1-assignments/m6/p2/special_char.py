@@ -8,12 +8,12 @@ def main():
     Read string from the input, store it in variable str_input.
     '''
     str_input = input()
-    LEN_str = len(str_input)
+    len_str = len(str_input)
     n_s = list(str_input)
-    for x_i in range(LEN_str):
+    for x_i in range(len_str):
         if n_s[x_i] == '!' or n_s[x_i] == '@' or n_s[x_i] == '#' or n_s[x_i] == '$' or n_s[x_i] == '%' or n_s[x_i] == '^' or n_s[x_i] == '&' or n_s[x_i] == '*':
             n_s[x_i] = ' '
-    str_input =''.join(n_s)
+    str_input = ''.join(n_s)
     print(str_input)
 if __name__ == "__main__":
     main()
