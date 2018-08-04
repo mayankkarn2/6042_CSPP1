@@ -11,7 +11,8 @@ def main():
     num = int(input())
     for x_i in range(1, num+1, 1):
         if x_i % 3 == 0 and x_i % 5 == 0:
-            print("FizzBuzz")
+            print("Fizz")
+            print("Buzz")
         elif x_i % 3 == 0:
             print("Fizz")
         elif x_i % 5 == 0:
