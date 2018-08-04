@@ -11,7 +11,9 @@ def main():
     len_str = len(str_input)
     n_s = list(str_input)
     for x_i in range(len_str):
-        if n_s[x_i] == '!' or n_s[x_i] == '@' or n_s[x_i] == '#' or n_s[x_i] == '$' or n_s[x_i] == '%' or n_s[x_i] == '^' or n_s[x_i] == '&' or n_s[x_i] == '*':
+        if n_s[x_i] == '!' or n_s[x_i] == '@' or n_s[x_i] == '#' or n_s[x_i] == '$'
+            n_s[x_i] = ' '
+        if n_s[x_i] == '%' or n_s[x_i] == '^' or n_s[x_i] == '&' or n_s[x_i] == '*'
             n_s[x_i] = ' '
     str_input = ''.join(n_s)
     print(str_input)
