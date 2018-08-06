@@ -39,7 +39,7 @@ def payingDebtOffInAYear(balance, annualInterestRate):
 				update_balance = unpaid_balance + m_i_r * unpaid_balance
 			i = i + 1
 		fix = fix + 10
-	print("Lowest Payement: " +str(fix-10))
+	return(str(fix-10))
 
 
 
