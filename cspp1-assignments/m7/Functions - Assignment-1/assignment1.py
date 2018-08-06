@@ -9,7 +9,7 @@ a person only pays the minimum monthly payment required by the
 # annualInterestRate - annual interest rate as a decimal
 # monthlyPaymentRate - minimum monthly payment rate as a decimal
 
-# For each month, calculate statements on the monthly payment 
+# For each month, calculate statements on the monthly payment
 and remaining balance. At the end of 12 months, print out the remaining
 # balance. Be sure to print out no more than two decimal digits of accuracy - so print
 
@@ -17,7 +17,7 @@ and remaining balance. At the end of 12 months, print out the remaining
 # instead of
 # Remaining balance: 813.4141998135
 
-# So your program only prints out one thing: the 
+# So your program only prints out one thing: the
 remaining balance at the end of the year in the format:
 # Remaining balance: 4784.0
 
@@ -25,12 +25,12 @@ remaining balance at the end of the year in the format:
 # Monthly interest rate= (Annual interest rate) / 12.0
 # Minimum monthly payment = (Minimum monthly payment rate) x (Previous balance)
 # Monthly unpaid balance = (Previous balance) - (Minimum monthly payment)
-# Updated balance each month = (Monthly unpaid balance) 
+# Updated balance each month = (Monthly unpaid balance)
 + (Monthly interest rate x Monthly unpaid balance)'''
 
 
 def payingDebtOffInAYear(balance_amount, annual_interest_rate, monthly_payment_Rate):
-    for x in range(0,12,1):
+    for x in range(0, 12, 1):
         monthly_payment = monthly_payment_Rate * balance_amount
         balance_amount = balance_amount - monthly_payment
         balance_amount = balance_amount + (annual_interest_rate/12) * balance_amount
