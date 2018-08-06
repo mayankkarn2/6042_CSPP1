@@ -34,7 +34,7 @@ def payingDebtOffInAYear(balance_amount, annual_interest_rate, monthly_payment_R
         monthly_payment = monthly_payment_Rate * balance_amount
         balance_amount = balance_amount - monthly_payment
         balance_amount = balance_amount + (annual_interest_rate/12) * balance_amount
-    return round(balance_amount,2)
+    return round(balance_amount, 2)
 
 def main():
     data = input()
