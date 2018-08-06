@@ -35,7 +35,7 @@ def paying_debt_offinayear(balance_amount, annual_interest_rate, monthly_payment
         monthly_payment = monthly_payment_rate * balance_amount
         balance_amount = balance_amount - monthly_payment
         balance_amount = balance_amount + (annual_interest_rate/12) * balance_amount
-        x_i=x_i+1
+        x_i = x_i+1
     return round(balance_amount, 2)
 
 def main():
