@@ -29,9 +29,9 @@ remaining balance at the end of the year in the format:
 + (Monthly interest rate x Monthly unpaid balance)'''
 
 
-def paying_debt_offInAYear(balance_amount, annual_interest_rate, monthly_payment_Rate):
+def paying_debt_offInAYear(balance_amount, annual_interest_rate, monthly_payment_rate):
     for x_i in range(0, 12, 1):
-        monthly_payment = monthly_payment_Rate * balance_amount
+        monthly_payment = monthly_payment_rate * balance_amount
         balance_amount = balance_amount - monthly_payment
         balance_amount = balance_amount + (annual_interest_rate/12) * balance_amount
     return round(balance_amount, 2)
