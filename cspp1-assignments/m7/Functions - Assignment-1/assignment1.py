@@ -31,7 +31,7 @@ remaining balance at the end of the year in the format:
 
 def paying_debt_offinayear(balance_amount, annual_interest_rate, monthly_payment_rate):
     '''Input Balance, Annual interest, monthly payment'''
-    for x_i in range(0, 12, 1):
+    for in range(0, 12, 1):
         monthly_payment = monthly_payment_rate * balance_amount
         balance_amount = balance_amount - monthly_payment
         balance_amount = balance_amount + (annual_interest_rate/12) * balance_amount
