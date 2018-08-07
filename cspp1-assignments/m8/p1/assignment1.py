@@ -13,8 +13,8 @@ def factorial(input_n):
     '''
     if input_n in (1, 0):
         return 1
-    else:
-        return input_n * factorial(input_n-1)
+
+    return input_n * factorial(input_n-1)
 def main():
     '''T  his program calculates factorial
     '''
