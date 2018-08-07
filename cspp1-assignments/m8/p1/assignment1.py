@@ -11,13 +11,14 @@ def factorial(n):
     returns: a positive integer, the factorial of n.
     '''
     if n == 1 or n==0:
-    	return 1
+        return 1
     else:
-    	return n * factorial(n-1)
+        return n * factorial(n-1)
 def main():
-	'''This program calculates factorial'''
+    '''T  his program calculates factorial
+    '''
     a = input()
-    print(factorial(int(a)))    
+    print(factorial(int(a)))
 
 if __name__== "__main__":
     main()
