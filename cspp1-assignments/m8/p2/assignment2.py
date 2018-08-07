@@ -15,12 +15,12 @@ def sumofdigits(var_n):
     	return 0
     var_r = var_n % 10
     var_n = var_n//10
-    return var_r + sumofdigits(n)
+    return var_r + sumofdigits(var_n)
 
 
 def main():
     var_a = input()
-    print(sumofdigits(int(a)))
+    print(sumofdigits(int(var_a)))
 
 if __name__== "__main__":
     main()
