@@ -28,7 +28,7 @@ required math is found below:
 # Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x
  Monthly unpaid balance)'''
 
-def payingDebtOffInAYear(balance_i, annual_interestrate):
+def paying_debtoffinayear(balance_i, annual_interestrate):
     '''Input balance, annual interest rate
         output: lowest payment'''
     minimum_fixedpayment = 0
@@ -48,7 +48,7 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print(payingDebtOffInAYear(data[0], data[1]))
+    print(payingdebtoffinayear(data[0], data[1]))
     
 if __name__== "__main__":
     main()
