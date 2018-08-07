@@ -23,23 +23,18 @@
 
 
 
-def payingDebtOffInAYear(balance, annualInterestRate):
-	m_i_r=annualInterestRate/12.0
-	fix=10
-	flag=0
-	while(flag == 0):
-		i=1
-		update_balance = balance
-		unpaid_balance = balance
-		while(i<=12):
-			if update_balance<=0:
-				flag=1
-			else:
-				unpaid_balance = unpaid_balance - fix
-				update_balance = unpaid_balance + m_i_r * unpaid_balance
-			i = i + 1
-		fix = fix + 10
-	return(str(fix-10))
+def payingDebtOffInAYear(balance_i, annual_interestrate):
+	minimum_fixedpayment = 0
+	monthly_interestrate = annual_interestrate/12
+	my_balance = balance_i
+	while my_balance > 0:
+		minimum_fixedpayment += 10
+		for _ in range(0, 12):
+			my_balance -= minimum_fixedpayment
+			my_balance += (my_balance * monthly_interestrate)
+		if my_balance > 0:
+			my_balance = balance_i
+	return "Lowest Payment: " + str(minimum_fixedpayment)
 
 
 
