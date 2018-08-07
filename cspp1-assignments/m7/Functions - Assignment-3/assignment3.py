@@ -37,15 +37,15 @@
 
 
 
-def payingDebtOffInAYear(balance, annualInterestRate):
-    init_balance = balance_i
+def payingDebtOffInAYear(balance_i, annual_interestrate):
+    in_balance = balance_i
     monthly_interestrate = annual_interestrate/12
-    lower_i = init_balance/12
-    upper_i = (init_balance * (1 + monthly_interestrate)**12)/12.0
+    lower_i = in_balance/12
+    upper_i = (in_balance * (1 + monthly_interestrate)**12)/12.0
     epsilon_i = 0.03
     while abs(balance_i) > epsilon_i:
         monthly_paymentrate = (upper_i + lower_i)/2
-        for _ in range(12):
+        for x in range(12):
             ans_i = balance_i - monthly_paymentrate
             balance_i = ans_i + (ans_i * monthly_interestrate)
         if balance_i > epsilon_i:
@@ -54,6 +54,7 @@ def payingDebtOffInAYear(balance, annualInterestRate):
             upper_i = monthly_paymentrate
         else:
             break
+        x = x+1
     return str(round(monthly_paymentrate, 2))
 
 
