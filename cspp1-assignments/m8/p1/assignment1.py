@@ -15,6 +15,7 @@ def factorial(n):
     else:
     	return n * factorial(n-1)
 def main():
+	'''This program calculates factorial'''
     a = input()
     print(factorial(int(a)))    
 
