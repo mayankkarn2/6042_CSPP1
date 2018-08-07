@@ -18,8 +18,8 @@ def factorial(input_n):
 def main():
     '''T  his program calculates factorial
     '''
-    a = input()
-    print(factorial(int(a)))
+    a_input = input()
+    print(factorial(int(a_input)))
 
 if __name__ == "__main__":
     main()
