@@ -14,12 +14,14 @@ def get_guessed_word(secret_word, letters_guessed):
     '''
     i = 0
     secret_copy = list(secret_word)
+    output = []
+    for x in range(0,len(secret_word),1):
+        output.append("_")
     while i < len(secret_word):
         if secret_copy[i] in letters_guessed:
-            secret_copy[i] = "_"
+            output[i] = secret_copy[i]
         i += 1
-    secret_word = ''.join(secret_copy)
-    return secret_word
+    return ''.join(output)
 
 def main():
     '''
