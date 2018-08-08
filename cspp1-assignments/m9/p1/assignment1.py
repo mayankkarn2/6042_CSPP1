@@ -22,10 +22,7 @@ def is_word_guessed(secret_word, letters_guessed):
             i += 1
         else:
             i += 1
-    if found >= len(secret_word):
-        return True
-    else:
-        return False
+    return found >= len(secret_word)
 
 def main():
     '''
