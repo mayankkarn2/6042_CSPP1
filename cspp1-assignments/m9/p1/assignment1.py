@@ -19,9 +19,7 @@ def is_word_guessed(secret_word, letters_guessed):
     while i < len(secret_word):
         if secret_word[i] in letters_guessed:
             found += 1
-            i += 1
-        else:
-            i += 1
+        i += 1
     return found >= len(secret_word)
 
 def main():
