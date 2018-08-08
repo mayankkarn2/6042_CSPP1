@@ -15,14 +15,14 @@ def is_word_guessed(secret_word, letters_guessed):
 	  False otherwise
 	'''
 	i = 0
-	found = 1
-	while i<len(letters_guessed) and found == 1:
+	found = 0
+	while i<len(letters_guessed):
 		if letters_guessed[i] in secret_word:
+			found += 1
 			i += 1
 		else:
-			found = 0
 			i += 1
-	if found == 1:
+	if found == len(secret_word):
 		return True
 	else:
 		return False
