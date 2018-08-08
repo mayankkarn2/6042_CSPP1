@@ -15,7 +15,7 @@ def get_guessed_word(secret_word, letters_guessed):
     i = 0
     secret_copy = list(secret_word)
     output = []
-    for x in range(0,len(secret_word),1):
+    for x_counter in range(0, len(secret_word), 1):
         output.append("_")
     while i < len(secret_word):
         if secret_copy[i] in letters_guessed:
