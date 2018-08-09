@@ -14,9 +14,9 @@ def get_available_letters(letters_guessed):
     '''
     set_alpha = "abcdefghijklmnopqrstuvwxyz"
     set_list = list(set_alpha)
-    for search_letter in range(len(set_list)):
-        if set_list[search_letter] in letters_guessed:
-            set_list[search_letter] = ''
+    for search_index, _ in enumerate(set_list):
+        if set_list[search_index] in letters_guessed:
+            set_list[search_index] = ''
     return ''.join(set_list)
 
 def main():
