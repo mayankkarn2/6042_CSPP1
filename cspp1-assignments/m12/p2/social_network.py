@@ -20,7 +20,7 @@ def follow(network, arg1, arg2):
             network[arg1].append(arg2)
     if found == 0:
         network[arg1] = [arg2]
-    print(network)
+    # print(network)
     return network
 
 
@@ -36,7 +36,7 @@ def unfollow(network, arg1, arg2):
     for key in network:
         if str(key) == arg1:
             network[arg1].remove(arg2)
-    print(network)
+    # print(network)
     return network
 
 def delete_person(network, arg1):
@@ -52,7 +52,7 @@ def delete_person(network, arg1):
     for key in network:
         if str(key) == arg1:
             del network[arg1]
-    print(network)
+    # print(network)
     return network
 
 
