@@ -3,7 +3,6 @@
     There are 3 functions below that have to be completed
     Note: PyLint score need not be 10/10 for this assignment. We expect 9.5/10
 '''
-import copy
 def follow(network, arg1, arg2):
     '''
         3 arguments are passed to this function
