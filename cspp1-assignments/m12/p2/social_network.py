@@ -47,6 +47,9 @@ def delete_person(network, arg1):
         also, before deleting arg1, remove arg1 from the everyone's followers list
         update the network dictionary and return it
     '''
+    for key in network.keys():
+        if str(arg1) in network[key]:
+            network[key].remove(arg1) 
     for key in list(network):
         if str(key) == arg1:
             del network[arg1]
