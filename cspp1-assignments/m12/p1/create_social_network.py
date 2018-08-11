@@ -35,14 +35,17 @@ def create_social_network(data):
     data2 = data.replace(' ','')
     data3 = data2.split('\n')
     adict = {}
-    for counter_i in data3:
-        keys, value = counter_i.split("follows")
-        if keys in adict.values():
-            if value not in adict[keys]:
-                adict[keys].append(value)
-        else:
-            adict[keys] = str(value).split(',')
-    return adict
+    if data.find('follows') == -1:
+        return adict
+    else:
+        for counter_i in data3:
+            keys, value = counter_i.split("follows")
+            if keys in adict.values():
+                if value not in adict[keys]:
+                    adict[keys].append(value)
+            else:
+                adict[keys] = str(value).split(',')
+        return adict
 
 
 def main():
