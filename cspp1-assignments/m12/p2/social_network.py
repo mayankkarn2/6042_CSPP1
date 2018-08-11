@@ -3,7 +3,7 @@
     There are 3 functions below that have to be completed
     Note: PyLint score need not be 10/10 for this assignment. We expect 9.5/10
 '''
-
+import copy
 def follow(network, arg1, arg2):
     '''
         3 arguments are passed to this function
@@ -20,7 +20,6 @@ def follow(network, arg1, arg2):
             network[arg1].append(arg2)
     if found == 0:
         network[arg1] = [arg2]
-    # print(network)
     return network
 
 
@@ -36,7 +35,6 @@ def unfollow(network, arg1, arg2):
     for key in network:
         if str(key) == arg1:
             network[arg1].remove(arg2)
-    # print(network)
     return network
 
 def delete_person(network, arg1):
@@ -49,10 +47,9 @@ def delete_person(network, arg1):
         also, before deleting arg1, remove arg1 from the everyone's followers list
         update the network dictionary and return it
     '''
-    for key in network:
+    for key in list(network):
         if str(key) == arg1:
             del network[arg1]
-    # print(network)
     return network
 
 

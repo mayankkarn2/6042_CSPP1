@@ -1,2 +1,3 @@
 https://stackoverflow.com/questions/8270092/remove-all-whitespace-in-a-string-in-python
 https://stackoverflow.com/questions/3437059/does-python-have-a-string-contains-substring-method
+https://stackoverflow.com/questions/11941817/how-to-avoid-runtimeerror-dictionary-changed-size-during-iteration-error
