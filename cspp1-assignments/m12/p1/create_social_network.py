@@ -36,7 +36,7 @@ def create_social_network(data):
     data3 = data2.split('\n')
     adict = {}
     if data.find('follows') == -1:
-        return adict
+        result = adict
     else:
         for counter_i in data3:
             keys, value = counter_i.split("follows")
@@ -45,7 +45,8 @@ def create_social_network(data):
                     adict[keys].append(value)
             else:
                 adict[keys] = str(value).split(',')
-        return adict
+        result = adict
+    return result
 
 
 def main():
