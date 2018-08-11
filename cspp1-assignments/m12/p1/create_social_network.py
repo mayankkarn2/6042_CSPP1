@@ -41,7 +41,7 @@ def create_social_network(data):
             if value not in adict[keys]:
                 adict[keys].append(value)
         else:
-            adict[keys] = [value]
+            adict[keys] = [str(value)]
     return adict
 
 
