@@ -32,7 +32,7 @@ def create_social_network(data):
         Empty dictionary is not None, it is a dictionary with no keys
     '''
     data = data.strip()
-    data2 = data.replace(' ','')
+    data2 = data.replace(' ', '')
     data3 = data2.split('\n')
     adict = {}
     if data.find('follows') == -1:
