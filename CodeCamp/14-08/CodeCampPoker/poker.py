@@ -37,16 +37,16 @@ def is_straight(hand):
             l_2.append(int(k))
         i = i+1
     l_3 = sorted(l_2)
-    p = 0
-    k = 1
+    p_tr = 0
+    k_tr = 1
     check1 = 1
-    while k < len(l_3) and check1 == 1:
-        if l_3[k]-l_3[p] == 1:
+    while k_tr < len(l_3) and check1 == 1:
+        if l_3[k_tr]-l_3[p_tr] == 1:
             pass
         else:
             check1 = 0
-        k = k + 1
-        p = p + 1
+        k_tr = k_tr + 1
+        p_tr = p_tr + 1
     return check1 == 1
 
 def is_flush(hand):
