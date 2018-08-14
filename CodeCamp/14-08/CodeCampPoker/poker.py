@@ -16,7 +16,7 @@ def is_straight(hand):
     '''
     i = 0
     l_2 = []
-    while(i<len(hand)):
+    while(i < len(hand)):
         if hand[i][0] == 'T':
             k = hand[i][0].replace("T", "10")
             l_2.append(int(k))
@@ -62,7 +62,7 @@ def is_flush(hand):
     i = 0
     j = 1
     is_flus = 1
-    while(j<len(hand) and is_flus == 1):
+    while(j < len(hand) and is_flus == 1):
         if hand[i][1] != hand[j][1]:
             is_flus = 0
         else:
