@@ -16,7 +16,7 @@ def is_straight(hand):
     '''
     i = 0
     l_2 = []
-    while(i < len(hand)):
+    while i < len(hand):
         if hand[i][0] == 'T':
             k = hand[i][0].replace("T", "10")
             l_2.append(int(k))
