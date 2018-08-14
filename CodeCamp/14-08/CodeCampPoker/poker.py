@@ -39,7 +39,6 @@ def is_straight(hand):
             l2.append(int(k))
         i = i+1
     l3 = sorted(l2)
-    print(l3)
     p = 0
     k = 1
     check1 = 1
