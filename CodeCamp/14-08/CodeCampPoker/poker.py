@@ -105,9 +105,9 @@ def hand_rank(hand):
     is_flus = is_flush(hand)
     if is_flus and is_straigh:
         return 3
-    elif is_straigh:
-        return 2
     elif is_flus:
+        return 2
+    elif is_straigh:
         return 1
     else:
         return 0
