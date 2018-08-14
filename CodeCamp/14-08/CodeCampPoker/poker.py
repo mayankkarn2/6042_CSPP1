@@ -36,12 +36,12 @@ def is_straight(hand):
             k = (hand[i][0])
             l_2.append(int(k))
         i = i+1
-    l_3 = sorted(l2)
+    l_3 = sorted(l_2)
     p = 0
     k = 1
     check1 = 1
-    while k < len(l3) and check1 == 1:
-        if l3[k]-l3[p] == 1:
+    while k < len(l_3) and check1 == 1:
+        if l_3[k]-l_3[p] == 1:
             pass
         else:
             check1 = 0
