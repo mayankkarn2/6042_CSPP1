@@ -18,19 +18,19 @@ def is_straight(hand):
     l_2 = []
     while(i<len(hand)):
         if hand[i][0] == 'T':
-            k = hand[i][0].replace("T","10")
+            k = hand[i][0].replace("T", "10")
             l_2.append(int(k))
         elif hand[i][0] == 'J':
-            k = hand[i][0].replace("J","11")
+            k = hand[i][0].replace("J", "11")
             l_2.append(int(k))
         elif hand[i][0] == 'Q':
-            k = hand[i][0].replace("Q","12")
+            k = hand[i][0].replace("Q", "12")
             l_2.append(int(k))
         elif hand[i][0] == 'K':
-            k = hand[i][0].replace("K","13")
+            k = hand[i][0].replace("K", "13")
             l_2.append(int(k))
         elif hand[i][0] == 'A':
-            k = hand[i][0].replace("A","14")
+            k = hand[i][0].replace("A", "14")
             l_2.append(int(k))
         else:
             k = (hand[i][0])
