@@ -29,6 +29,7 @@ def is_straight(hand):
             l2.append(int(k))
         elif hand[i][0] == 'K':
             k = hand[i][0].replace("K","13")
+
             l2.append(int(k))
         elif hand[i][0] == 'A':
             k = hand[i][0].replace("A","14")
@@ -38,6 +39,7 @@ def is_straight(hand):
             l2.append(int(k))
         i = i+1
     l3 = sorted(l2)
+    print(l3)
     p = 0
     k = 1
     check1 = 1
@@ -48,9 +50,7 @@ def is_straight(hand):
             check1 = 0
         k = k + 1
         p = p + 1
-    if check1 == 1:
-        isStraight.append(hand)
-    return hand in isStraight
+    return check1 == 1
 
 def is_flush(hand):
     '''
@@ -75,7 +75,8 @@ def is_flush(hand):
             j = j + 1
         if is_flush == 1:
             flush.append(hand)
-    return hand in flush
+    return is_flush == 1
+
 
 def hand_rank(hand):
     '''
