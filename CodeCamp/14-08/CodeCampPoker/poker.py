@@ -15,29 +15,28 @@ def is_straight(hand):
         Write the code for it and return True if it is a straight else return False
     '''
     i = 0
-    l2 = []
+    l_2 = []
     while(i<len(hand)):
         if hand[i][0] == 'T':
             k = hand[i][0].replace("T","10")
-            l2.append(int(k))
+            l_2.append(int(k))
         elif hand[i][0] == 'J':
             k = hand[i][0].replace("J","11")
-            l2.append(int(k))
+            l_2.append(int(k))
         elif hand[i][0] == 'Q':
             k = hand[i][0].replace("Q","12")
-            l2.append(int(k))
+            l_2.append(int(k))
         elif hand[i][0] == 'K':
             k = hand[i][0].replace("K","13")
-
-            l2.append(int(k))
+            l_2.append(int(k))
         elif hand[i][0] == 'A':
             k = hand[i][0].replace("A","14")
-            l2.append(int(k))
+            l_2.append(int(k))
         else:
             k = (hand[i][0])
-            l2.append(int(k))
+            l_2.append(int(k))
         i = i+1
-    l3 = sorted(l2)
+    l_3 = sorted(l2)
     p = 0
     k = 1
     check1 = 1
