@@ -140,7 +140,7 @@ def is_two_pair(hand):
     dicti = Counter(l2)
     temp = dicti.values()
     l3 = (list(temp))
-    if len(l3) == 3
+    if len(l3) == 3:
         return True
     else:
         return False
