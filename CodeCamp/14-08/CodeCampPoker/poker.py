@@ -140,7 +140,7 @@ def is_two_pair(hand):
     dicti = Counter(l2)
     temp = dicti.values()
     l3 = (list(temp))
-    if 2 in l3:
+    if len(l3) == 3
         return True
     else:
         return False
@@ -150,7 +150,7 @@ def is_one_pair(hand):
     dicti = Counter(l2)
     temp = dicti.values()
     l3 = (list(temp))
-    if 1 in l3:
+    if len(l3) == 4:
         return True
     else:
         return False
@@ -182,22 +182,31 @@ def hand_rank(hand):
     is_straigh = is_straight(hand)
     is_flus = is_flush(hand)
     if is_flus and is_straigh:
+        print("1")
         return 8
     elif is_four_of_kind(hand):
+        print("2")
         return 7
     elif is_full_house(hand):
+        print("3")
         return 6
     elif is_flush(hand):
+        print("4")
         return 5
     elif is_straight(hand):
+        print("5")
         return 4
     elif is_three_of_kind(hand):
+        print("6")
         return 3
     elif is_two_pair(hand):
+        print("7")
         return 2
     elif is_one_pair(hand):
+        print("8")
         return 1
     else:
+        print("9")
         return 0
 def poker(hands):
     '''
