@@ -7,7 +7,7 @@ from collections import Counter
 def value_replace(hand):
     i = 0
     l2 = []
-    while(i<len(hand)):
+    while i<len(hand):
         if hand[i][0] == 'T':
             k = hand[i][0].replace("T","10")
             l2.append(int(k))
@@ -39,28 +39,6 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    # i = 0
-    # l_2 = []
-    # while i < len(hand):
-    #     if hand[i][0] == 'T':
-    #         k = hand[i][0].replace("T", "10")
-    #         l_2.append(int(k))
-    #     elif hand[i][0] == 'J':
-    #         k = hand[i][0].replace("J", "11")
-    #         l_2.append(int(k))
-    #     elif hand[i][0] == 'Q':
-    #         k = hand[i][0].replace("Q", "12")
-    #         l_2.append(int(k))
-    #     elif hand[i][0] == 'K':
-    #         k = hand[i][0].replace("K", "13")
-    #         l_2.append(int(k))
-    #     elif hand[i][0] == 'A':
-    #         k = hand[i][0].replace("A", "14")
-    #         l_2.append(int(k))
-    #     else:
-    #         k = (hand[i][0])
-    #         l_2.append(int(k))
-    #     i = i+1
     l_2 = value_replace(hand)
     l_3 = sorted(l_2)
     p_tr = 0
@@ -98,28 +76,6 @@ def is_flush(hand):
 
 
 def is_four_of_kind(hand):
-    # i = 0
-    # l2 = []
-    # while(i<len(hand)):
-    #     if hand[i][0] == 'T':
-    #         k = hand[i][0].replace("T","10")
-    #         l2.append(int(k))
-    #     elif hand[i][0] == 'J':
-    #         k = hand[i][0].replace("J","11")
-    #         l2.append(int(k))
-    #     elif hand[i][0] == 'Q':
-    #         k = hand[i][0].replace("Q","12")
-    #         l2.append(int(k))
-    #     elif hand[i][0] == 'K':
-    #         k = hand[i][0].replace("K","13")
-    #         l2.append(int(k))
-    #     elif hand[i][0] == 'A':
-    #         k = hand[i][0].replace("A","14")
-    #         l2.append(int(k))
-    #     else:
-    #         k = (hand[i][0])
-    #         l2.append(int(k))
-    # i = i+1
     l2 = value_replace(hand)
     l3 = sorted(l2)
     p = 0
