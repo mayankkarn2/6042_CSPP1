@@ -3,6 +3,31 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
+from collections import Counter
+def value_replace(hand):
+    i = 0
+    l2 = []
+    while(i<len(hand)):
+        if hand[i][0] == 'T':
+            k = hand[i][0].replace("T","10")
+            l2.append(int(k))
+        elif hand[i][0] == 'J':
+            k = hand[i][0].replace("J","11")
+            l2.append(int(k))
+        elif hand[i][0] == 'Q':
+            k = hand[i][0].replace("Q","12")
+            l2.append(int(k))
+        elif hand[i][0] == 'K':
+            k = hand[i][0].replace("K","13")
+            l2.append(int(k))
+        elif hand[i][0] == 'A':
+            k = hand[i][0].replace("A","14")
+            l2.append(int(k))
+        else:
+            k = (hand[i][0])
+            l2.append(int(k))
+        i = i+1
+    return l2
 
 def is_straight(hand):
     '''
@@ -14,28 +39,29 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    i = 0
-    l_2 = []
-    while i < len(hand):
-        if hand[i][0] == 'T':
-            k = hand[i][0].replace("T", "10")
-            l_2.append(int(k))
-        elif hand[i][0] == 'J':
-            k = hand[i][0].replace("J", "11")
-            l_2.append(int(k))
-        elif hand[i][0] == 'Q':
-            k = hand[i][0].replace("Q", "12")
-            l_2.append(int(k))
-        elif hand[i][0] == 'K':
-            k = hand[i][0].replace("K", "13")
-            l_2.append(int(k))
-        elif hand[i][0] == 'A':
-            k = hand[i][0].replace("A", "14")
-            l_2.append(int(k))
-        else:
-            k = (hand[i][0])
-            l_2.append(int(k))
-        i = i+1
+    # i = 0
+    # l_2 = []
+    # while i < len(hand):
+    #     if hand[i][0] == 'T':
+    #         k = hand[i][0].replace("T", "10")
+    #         l_2.append(int(k))
+    #     elif hand[i][0] == 'J':
+    #         k = hand[i][0].replace("J", "11")
+    #         l_2.append(int(k))
+    #     elif hand[i][0] == 'Q':
+    #         k = hand[i][0].replace("Q", "12")
+    #         l_2.append(int(k))
+    #     elif hand[i][0] == 'K':
+    #         k = hand[i][0].replace("K", "13")
+    #         l_2.append(int(k))
+    #     elif hand[i][0] == 'A':
+    #         k = hand[i][0].replace("A", "14")
+    #         l_2.append(int(k))
+    #     else:
+    #         k = (hand[i][0])
+    #         l_2.append(int(k))
+    #     i = i+1
+    l_2 = value_replace(hand)
     l_3 = sorted(l_2)
     p_tr = 0
     k_tr = 1
@@ -48,7 +74,6 @@ def is_straight(hand):
         k_tr = k_tr + 1
         p_tr = p_tr + 1
     return check1 == 1
-
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
@@ -58,7 +83,6 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    flush = []
     i = 0
     j = 1
     is_flus = 1
@@ -68,10 +92,112 @@ def is_flush(hand):
         else:
             i = i + 1
             j = j + 1
-        if is_flus == 1:
-            flush.append(hand)
+        # if is_flus == 1:
+        #     # flush.append(hand)
     return is_flus == 1
 
+
+def is_four_of_kind(hand):
+    # i = 0
+    # l2 = []
+    # while(i<len(hand)):
+    #     if hand[i][0] == 'T':
+    #         k = hand[i][0].replace("T","10")
+    #         l2.append(int(k))
+    #     elif hand[i][0] == 'J':
+    #         k = hand[i][0].replace("J","11")
+    #         l2.append(int(k))
+    #     elif hand[i][0] == 'Q':
+    #         k = hand[i][0].replace("Q","12")
+    #         l2.append(int(k))
+    #     elif hand[i][0] == 'K':
+    #         k = hand[i][0].replace("K","13")
+    #         l2.append(int(k))
+    #     elif hand[i][0] == 'A':
+    #         k = hand[i][0].replace("A","14")
+    #         l2.append(int(k))
+    #     else:
+    #         k = (hand[i][0])
+    #         l2.append(int(k))
+    # i = i+1
+    l2 = value_replace(hand)
+    l3 = sorted(l2)
+    p = 0
+    k = 1
+    check1 = 5
+    while k < len(l3) and check1 >=4:
+        if l3[k]-l3[p] != 0:
+            check1 -= 1
+        else:
+            pass
+        k = k + 1
+        p = p + 1
+    return check1 == 4
+
+def is_full_house(hand):
+    l2 = value_replace(hand)
+    l3 = sorted(l2)
+    p = 0
+    k = 1
+    check = 0
+    check2 = 0
+    while k < len(l3):
+        if l3[k]-l3[p] == 0:
+            check2 += 1
+            if check2 == 2 and l3[k+1]-l3[p+1]!=0:
+                p = 3
+                if l3[p] == l3[p+1]:
+                    check = 1
+                    break
+
+        else:
+            break
+        p = p + 1
+        k = k + 1
+    p = 0
+    k = 1
+    check3 = 0
+    if l3[k]-l3[p] == 0 and check == 0:
+        p = 2
+        k = 3
+        while k < len(l3):
+            if l3[k] - l3[p] == 0:
+                check3 += 1
+            else:
+                pass
+            p += 1
+            k += 1
+    return check == 1 or check3 == 2
+
+def is_three_of_kind(hand):
+    l2 = value_replace(hand)
+    dicti = Counter(l2)
+    temp = dicti.values()
+    l3 = (list(temp))
+    if 3 in l3:
+        return True
+    else:
+        return False
+
+def is_two_pair(hand):
+    l2 = value_replace(hand)
+    dicti = Counter(l2)
+    temp = dicti.values()
+    l3 = (list(temp))
+    if 2 in l3:
+        return True
+    else:
+        return False
+
+def is_one_pair(hand):
+    l2 = value_replace(hand)
+    dicti = Counter(l2)
+    temp = dicti.values()
+    l3 = (list(temp))
+    if 1 in l3:
+        return True
+    else:
+        return False
 
 def hand_rank(hand):
     '''
@@ -100,10 +226,20 @@ def hand_rank(hand):
     is_straigh = is_straight(hand)
     is_flus = is_flush(hand)
     if is_flus and is_straigh:
+        return 8
+    elif is_four_of_kind(hand):
+        return 7
+    elif is_full_house(hand):
+        return 6
+    elif is_flush(hand):
+        return 5
+    elif is_straight(hand):
+        return 4
+    elif is_three_of_kind(hand):
         return 3
-    elif is_flus:
+    elif is_two_pair(hand):
         return 2
-    elif is_straigh:
+    elif is_one_pair(hand):
         return 1
     else:
         return 0
