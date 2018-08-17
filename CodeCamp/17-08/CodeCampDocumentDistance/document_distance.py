@@ -43,10 +43,10 @@ def similarity(dict1, dict2):
     sdict1_ = []
     sdict2_ = []
     for word in dict1_:
-        if word not in stopwords.keys() and len(word)>0:
+        if word not in stopwords.keys() and len(word) > 0:
             sdict1_.append(word)
     for word in dict2_:
-        if word not in stopwords.keys() and len(word)>0:
+        if word not in stopwords.keys() and len(word) > 0:
             sdict2_.append(word)
     word_frequency_ = word_frequency(sdict1_, sdict2_)
     num_sum = 0
