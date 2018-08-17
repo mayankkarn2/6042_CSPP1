@@ -46,14 +46,13 @@ def similarity(dict1, dict2):
     sdict1_ = []
     sdict2_ = []
     for word in dict1_:
-        if word not in stopwords.keys() and len(word) > 0:
+        if word not in stopwords.keys() and len(word) != 0:
             sdict1_.append(word)
     for word in dict2_:
-        if word not in stopwords.keys() and len(word) > 0:
+        if word not in stopwords.keys() and len(word) != 0:
             sdict2_.append(word)
     word_frequency_ = word_frequency(sdict1_, sdict2_)
     num_sum = 0
-    # word_frequency_ = { 'a':[5, 6], 'b': [4, 6], 'c': [1, 3]}
     for key in word_frequency_.values():
         num_sum = num_sum + (int(key[0]) * int(key[1]))
     den = 0
@@ -73,8 +72,8 @@ def load_stopwords(filename):
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
-    with open(filename, 'r') as filename:
-        for line in filename:
+    with open(filename, 'r') as filename1:
+        for line in filename1:
             stopwords[line.strip()] = 0
     return stopwords
 
