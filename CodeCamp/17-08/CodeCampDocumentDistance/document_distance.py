@@ -5,6 +5,9 @@ import math
 import re
 from collections import Counter
 def word_frequency(list1, list2):
+    '''
+        Returns word frequency
+    '''
     freq_a = dict(Counter(list1))
     freq_b = dict(Counter(list2))
     word_freq = {}
