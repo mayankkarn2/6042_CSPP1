@@ -40,9 +40,9 @@ def search(search_index, query):
     for word in query:
         word = word.split()
         querycopy.append(word)
-    for query in querycopy:
+    for query_ in querycopy:
         out = set()
-        for word in query:
+        for word in query_:
             if word in search_index.keys():
                 i = 0
                 while i < len(search_index[word]):
