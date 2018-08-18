@@ -79,16 +79,26 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
+    print(docs)
     list1 = word_list(docs)
     search_index = {}
-    freq = Counter(list1)
-    # for sentence in list1:
-    #     for word in sentence:
-    #         list_f = Counter(sentence)
-    #         if word in list1:
+    for sentence in list1:
+        i = 0
+        while i < len(sentence):
+            search = sentence[i]
+            for sublist in list1:
+                if search in sublist:
+                    ind = list1.index(sublist)
+                    cnt = sublist.count(search)
+                    t = (ind, cnt)
+                    if search not in search_index.keys():
+                        search_index[search] = list(tuple(t))
+                    else:
+                        search_index[search].append(list(tuple(t)))
 
-
-
+            i = i +1
+    print(search_index)
+    return search_index
 
 # helper function to print the search index
 # use this to verify how the search index looks
