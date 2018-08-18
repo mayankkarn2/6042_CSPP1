@@ -97,7 +97,6 @@ def build_search_index(docs):
                         search_index[search].append(list(tuple(t)))
 
             i = i +1
-    print(search_index)
     return search_index
 
 # helper function to print the search index
@@ -126,7 +125,7 @@ def main():
 
     # call print to display the search index
     build_search_index(documents)
-    # print_search_index(build_search_index(documents))
+    print_search_index(build_search_index(documents))
 
 if __name__ == '__main__':
     main()
