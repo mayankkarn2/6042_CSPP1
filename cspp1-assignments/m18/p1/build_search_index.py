@@ -84,15 +84,18 @@ def build_search_index(docs):
         i = 0
         while i < len(sentence):
             search = sentence[i]
-            for sublist in list1:
-                if search in sublist:
-                    ind = list1.index(sublist)
-                    cnt = sublist.count(search)
-                    t_n = (ind, cnt)
-                    if search not in search_index.keys():
-                        search_index[search] = list(tuple(t_n))
-                    else:
-                        search_index[search].append(list(tuple(t_n)))
+            if search in search_index.keys():
+                pass
+            else:
+                for sublist in list1:
+                    if search in sublist:
+                        ind = list1.index(sublist)
+                        cnt = sublist.count(search)
+                        t_n = (ind, cnt)
+                        if search not in search_index.keys():
+                            search_index[search] = [(t_n)]
+                        else:
+                            search_index[search].append(tuple(t_n))
 
             i = i +1
     return search_index
