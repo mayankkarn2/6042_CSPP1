@@ -147,13 +147,16 @@ def is_two_pair(hand):
 
 def is_one_pair(hand):
     l2 = value_replace(hand)
-    print(l2)
     sort_l2 = sorted(l2)
     dicti = dict(Counter(sort_l2))
     temp = dicti.values()
+    print(dicti)
     l3 = (list(temp))
     if len(l3) == 4:
-        return True
+        for key in dicti:
+            if dicti[key] == 2:
+                # print(key)
+                return key
     else:
         return False
 
@@ -185,31 +188,32 @@ def hand_rank(hand):
     is_flus = is_flush(hand)
     if is_flus and is_straigh:
         print("1")
-        return 8
+        return (8, )
     elif is_four_of_kind(hand):
         print("2")
-        return 7
+        return (7, )
     elif is_full_house(hand):
         print("3")
-        return 6
+        return (6, )
     elif is_flush(hand):
         print("4")
-        return 5
+        return (5, )
     elif is_straight(hand):
         print("5")
-        return 4
+        return (4, )
     elif is_three_of_kind(hand):
         print("6")
-        return 3
+        return (3, )
     elif is_two_pair(hand):
         print("7")
-        return 2
+        return (2, )
     elif is_one_pair(hand):
-        print("8")
-        return 1
+        #print("8")
+        print(1, is_one_pair(hand))
+        return (1, is_one_pair(hand))
     else:
         print("9")
-        return 0
+        return (0, )
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
