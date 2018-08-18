@@ -77,7 +77,6 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    print(docs)
     list1 = word_list(docs)
     search_index = {}
     for sentence in list1:
