@@ -28,7 +28,6 @@
 
     Note: PyLint score need not be 10/10. Anything above 9.5 is good.
 '''
-from collections import OrderedDict
 def search(search_index, query):
     '''
         function to search through the search index and return the results
@@ -58,7 +57,7 @@ def process_queries(search_index, queries):
         iterate through all the queries and call the search function
         print the results returned by search function
     '''
-    output = search(search_index, queries)
+    search(search_index, queries)
 
 def main():
     '''
@@ -69,7 +68,6 @@ def main():
 
     # read the number of search queries
     lines = int(input())
-    
     # read the search queries into a list
     queries = []
     for i in range(lines):
