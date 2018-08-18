@@ -21,7 +21,6 @@
     }
 '''
 import re
-from collections import Counter
 # helper function to load the stop words from a file
 def load_stopwords(filename):
     '''
@@ -42,7 +41,6 @@ def word_list(text):
     '''
     regex = re.compile('[^a-z]')
     text_c = []
-    text_c2 = []
     text_c3 = []
     for string in text:
         string = string.lower().split()
@@ -58,7 +56,7 @@ def word_list(text):
     for sentence in text_c3:
         k = []
         for word in sentence:
-            if word not in stop_words.keys() and len(word)!=0:
+            if word not in stop_words.keys() and len(word) != 0:
                 k.append(word)
         c_text.append(k)
     return c_text
@@ -90,11 +88,11 @@ def build_search_index(docs):
                 if search in sublist:
                     ind = list1.index(sublist)
                     cnt = sublist.count(search)
-                    t = (ind, cnt)
+                    t_n = (ind, cnt)
                     if search not in search_index.keys():
-                        search_index[search] = list(tuple(t))
+                        search_index[search] = list(tuple(t_n))
                     else:
-                        search_index[search].append(list(tuple(t)))
+                        search_index[search].append(list(tuple(t_n)))
 
             i = i +1
     return search_index
