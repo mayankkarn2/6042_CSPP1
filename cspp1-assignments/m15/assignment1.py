@@ -149,7 +149,6 @@ class PlaintextMessage(Message):
     def __init__(self, text, shift):
         '''
         Initializes a PlaintextMessage object
-
         text (string): the message's text
         shift (integer): the shift associated with this message
 
