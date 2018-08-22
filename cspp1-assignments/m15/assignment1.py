@@ -73,6 +73,7 @@ class Message():
         '''
         self.message_text = text
         self.valid_words = load_words("words.txt")
+        self.shift_dict = {}
 
     ### DO NOT MODIFY THIS METHOD ###
     def get_message_text(self):
@@ -165,7 +166,7 @@ class PlaintextMessage(Message):
         self.text = text
         self.shift = shift
         self.valid_words = load_words("words.txt")
-        message = Message(text)
+        message = Message.__init__(self, text)
         self.encrypting_dict = message.build_shift_dict(shift)
         self.message_text_encrypted = message.apply_shift(shift)
 
@@ -209,7 +210,6 @@ class PlaintextMessage(Message):
         Returns: nothing
         '''
         self.shift = shift
-        message = Message(self.text)
         self.encrypting_dict = message.build_shift_dict(shift)
         self.message_text_encrypted = message.apply_shift(shift)
 
@@ -230,6 +230,8 @@ class CiphertextMessage(Message):
         self.message_text = text
         self.valid_words = load_words("words.txt")[:]
         self.max_valid_words = 0
+        Message.__init__(self, text)
+        self.decrypted_message = ()
 
 
     def decrypt_message(self):
