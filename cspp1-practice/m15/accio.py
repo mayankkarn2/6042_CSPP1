@@ -30,8 +30,8 @@ class Confundo(Spell):
 def studySpell(spell):
     print(spell)
 
-# spell = Accio()
-# spell.execute()
-# studySpell(spell)
-# studySpell(Confundo())
+spell = Accio()
+spell.execute()
+studySpell(spell)
+studySpell(Confundo())
 print(Accio())
