@@ -74,7 +74,6 @@ def read_matrix():
     for i in range(1,int(dim2[0])+1,1):
         values = input()
         rows = (values.split(" "))
-        print(rows)
         k = []
         for j in rows:
             k.append(int(j))
