@@ -100,9 +100,7 @@ def read_matrix():
         else:
             print(add_matrix(m1, m2))
             print(mult_matrix(m1, m2))
-
-    
-
+            
 def main():
     # read matrix 1
 
