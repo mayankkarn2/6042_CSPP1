@@ -12,7 +12,7 @@ def mult_matrix(m1, m2):
     col2 = len(m2[0])
     if col1 != row2:
         print("Error: Matrix shapes invalid for mult")
-        return
+        return "None"
     else:
         mul_matrix = []
         for i in range(0,row1,1):
@@ -39,6 +39,7 @@ def add_matrix(m1, m2):
     col2 = len(m1[0])
     if row1!=row2 or col1!=col2:
         print("Error: Matrix shapes invalid for addition")
+        return "None"
     else:
         addition_matrix = []
         for i in range(0,row1,1):
@@ -48,7 +49,6 @@ def add_matrix(m1, m2):
                 temp.append(k)
             addition_matrix.append(temp)
         print(addition_matrix)
-        return
 def read_matrix():
     '''
         read the matrix dimensions from input
