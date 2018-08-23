@@ -15,7 +15,7 @@ def mult_matrix(m1, m2):
         return "None"
     else:
         mul_matrix = []
-        for i in range(0, row_1 ,1):
+        for i in range(0, row_1, 1):
             temp_list = []
             for j in range(0, col_2, 1):
                 add = 0
@@ -37,14 +37,14 @@ def add_matrix(m1, m2):
     col_1 = len(m1[0])
     row_2 = len(m2)
     col_2 = len(m2[0])
-    if row_1!=row_2 or col_1!=col_2:
+    if row_1 != row_2 or col_1 != col_2:
         print("Error: Matrix shapes invalid for addition")
         return "None"
     else:
         addition_matrix = []
-        for i in range(0,row_1,1):
+        for i in range(0, row_1, 1):
             temp_list = []
-            for j in range(0,col_1,1):
+            for j in range(0, col_1, 1):
                 k = m1[i][j] + m2[i][j]
                 temp_list.append(k)
             addition_matrix.append(temp_list)
@@ -65,7 +65,7 @@ def read_matrix():
     except:
         print("Error: Invalid input for the matrix")
     else:
-        for i in range(1,int(dim_1[0])+1,1):
+        for i in range(1, int(dim_1[0])+1, 1):
             values = input()
             rows = (values.split(" "))
             k = []
@@ -78,7 +78,7 @@ def read_matrix():
     except:
         print("Error: Invalid input for the matrix")
     else:
-        for i in range(1,int(dim_2[0])+1,1):
+        for i in range(1, int(dim_2[0])+1, 1):
             values = input()
             rows = (values.split(" "))
             k = []
