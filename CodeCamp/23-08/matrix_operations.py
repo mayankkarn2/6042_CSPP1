@@ -79,7 +79,7 @@ def read_matrix():
             k.append(int(j))
         m2.append(k)
     add_matrix(m1, m2)
-    # mult_matrix(m1, m2)
+    mult_matrix(m1, m2)
 
     
 
