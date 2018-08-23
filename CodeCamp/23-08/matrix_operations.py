@@ -17,7 +17,7 @@ def mult_matrix(m1, m2):
         mul_matrix = []
         for i in range(0,row1,1):
             temp = []
-            for j in range(0,col1,1):
+            for j in range(0,col2,1):
                 add = 0
                 for k in range(0,col1,1):
                     add = add + m1[i][k] * m2[k][j]
@@ -59,26 +59,39 @@ def read_matrix():
     '''
     m1 = []
     m2 = []
-    q = input()
-    dim1 = q.split(',')
-    for i in range(1,int(dim1[0])+1,1):
-        values = input()
-        rows = (values.split(" "))
-        k = []
-        for j in rows:
-            k.append(int(j[0]))
-        m1.append(k)
-    q = input()
-    dim2 = q.split(',')
-    for i in range(1,int(dim2[0])+1,1):
-        values = input()
-        rows = (values.split(" "))
-        k = []
-        for j in rows:
-            k.append(int(j))
-        m2.append(k)
-    add_matrix(m1, m2)
-    mult_matrix(m1, m2)
+    try:
+        q = input()
+        dim1 = q.split(',')
+    except:
+        print("Error: Invalid input for the matrix")
+    else:
+        for i in range(1,int(dim1[0])+1,1):
+            values = input()
+            rows = (values.split(" "))
+            k = []
+            for j in rows:
+                k.append(int(j))
+            m1.append(k)
+    try:
+        q = input()
+        dim2 = q.split(',')
+    except:
+        print("Error: Invalid input for the matrix")
+    else:
+        for i in range(1,int(dim2[0])+1,1):
+            values = input()
+            rows = (values.split(" "))
+            k = []
+            for j in rows:
+                k.append(int(j))
+            m2.append(k)
+        if len(m2) != dim2[0] or len(m2[0]) != dim2[i]:
+            print("Error: Invalid input for the matrix")
+        elif len(m1) != dim1[0] or len(m1[0]) != dim1[i]:
+            print("Error: Invalid input for the matrix")
+        else:
+            add_matrix(m1, m2)
+            mult_matrix(m1, m2)
 
     
 
