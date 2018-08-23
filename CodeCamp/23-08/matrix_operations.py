@@ -102,13 +102,15 @@ def read_matrix():
             print(mult_matrix(m_1, m_2))
 
 def main():
-    # read matrix 1
+    '''
+        # read matrix 1
 
-    # read matrix 2
+        # read matrix 2
 
-    # add matrix 1 and matrix 2
+        # add matrix 1 and matrix 2
 
-    # multiply matrix 1 and matrix 2
+        # multiply matrix 1 and matrix 2
+    '''
     read_matrix()
 
 if __name__ == '__main__':
