@@ -85,9 +85,12 @@ def read_matrix():
             for j in rows:
                 k.append(int(j))
             m2.append(k)
-        if len(m2) != int(dim2[0]) or [len(i) != int(dim2[1]) for i in m2]:
+        p1 = [len(i) != int(dim2[1]) for i in m2]
+        print(p1)
+        p2 = [len(i) != int(dim1[1]) for i in m1]
+        if len(m2) != int(dim2[0]) or [True for i in p1]:
             print("Error: Invalid input for the matrix")
-        elif len(m1) != int(dim1[0]) or [len(i) != int(dim1[1]) for i in m1]:
+        elif len(m1) != int(dim1[0]) or [True for i in p2]:
             print("Error: Invalid input for the matrix")
         else:
             print(add_matrix(m1, m2))
