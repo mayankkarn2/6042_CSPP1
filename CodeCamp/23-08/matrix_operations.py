@@ -6,23 +6,23 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    row1 = len(m1)
-    col1 = len(m1[0])
-    row2 = len(m2)
-    col2 = len(m2[0])
-    if col1 != row2:
+    row_1 = len(m1)
+    col_1 = len(m1[0])
+    row_2 = len(m2)
+    col_2 = len(m2[0])
+    if col_1 != row_2:
         print("Error: Matrix shapes invalid for mult")
         return "None"
     else:
         mul_matrix = []
-        for i in range(0,row1,1):
-            temp = []
-            for j in range(0,col2,1):
+        for i in range(0, row_1 ,1):
+            temp_list = []
+            for j in range(0, col_2, 1):
                 add = 0
-                for k in range(0,col1,1):
+                for k in range(0, col_1, 1):
                     add = add + m1[i][k] * m2[k][j]
-                temp.append(add)
-            mul_matrix.append(temp)
+                temp_list.append(add)
+            mul_matrix.append(temp_list)
         return mul_matrix
 
 def add_matrix(m1, m2):
@@ -33,21 +33,21 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    row1 = len(m1)
-    col1 = len(m1[0])
-    row2 = len(m2)
-    col2 = len(m2[0])
-    if row1!=row2 or col1!=col2:
+    row_1 = len(m1)
+    col_1 = len(m1[0])
+    row_2 = len(m2)
+    col_2 = len(m2[0])
+    if row_1!=row_2 or col_1!=col_2:
         print("Error: Matrix shapes invalid for addition")
         return "None"
     else:
         addition_matrix = []
-        for i in range(0,row1,1):
-            temp = []
-            for j in range(0,col1,1):
+        for i in range(0,row_1,1):
+            temp_list = []
+            for j in range(0,col_1,1):
                 k = m1[i][j] + m2[i][j]
-                temp.append(k)
-            addition_matrix.append(temp)
+                temp_list.append(k)
+            addition_matrix.append(temp_list)
         return addition_matrix
 def read_matrix():
     '''
@@ -60,12 +60,12 @@ def read_matrix():
     m1 = []
     m2 = []
     try:
-        q = input()
-        dim1 = q.split(',')
+        q_int = input()
+        dim_1 = q_int.split(',')
     except:
         print("Error: Invalid input for the matrix")
     else:
-        for i in range(1,int(dim1[0])+1,1):
+        for i in range(1,int(dim_1[0])+1,1):
             values = input()
             rows = (values.split(" "))
             k = []
@@ -73,12 +73,12 @@ def read_matrix():
                 k.append(int(j))
             m1.append(k)
     try:
-        q = input()
-        dim2 = q.split(',')
+        q_int = input()
+        dim_2 = q_int.split(',')
     except:
         print("Error: Invalid input for the matrix")
     else:
-        for i in range(1,int(dim2[0])+1,1):
+        for i in range(1,int(dim_2[0])+1,1):
             values = input()
             rows = (values.split(" "))
             k = []
@@ -88,14 +88,14 @@ def read_matrix():
         len_check1 = 1
         len_check2 = 1
         for i in m2:
-            if len(i) != int(dim2[1]):
+            if len(i) != int(dim_2[1]):
                 len_check2 = 0
         for i in m1:
-            if len(i) != int(dim1[1]):
+            if len(i) != int(dim_1[1]):
                 len_check1 = 0
-        if len(m2) != int(dim2[0]) or len_check2 == 0:
+        if len(m2) != int(dim_2[0]) or len_check2 == 0:
             print("Error: Invalid input for the matrix")
-        elif len(m1) != int(dim1[0]) or len_check1 == 0:
+        elif len(m1) != int(dim_1[0]) or len_check1 == 0:
             print("Error: Invalid input for the matrix")
         else:
             print(add_matrix(m1, m2))
