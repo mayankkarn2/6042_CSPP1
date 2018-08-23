@@ -23,7 +23,7 @@ def mult_matrix(m1, m2):
                     add = add + m1[i][k] * m2[k][j]
                 temp.append(add)
             mul_matrix.append(temp)
-        print(mul_matrix)
+        return mul_matrix
 
 def add_matrix(m1, m2):
     '''
@@ -48,7 +48,7 @@ def add_matrix(m1, m2):
                 k = m1[i][j] + m2[i][j]
                 temp.append(k)
             addition_matrix.append(temp)
-        print(addition_matrix)
+        return addition_matrix
 def read_matrix():
     '''
         read the matrix dimensions from input
@@ -90,8 +90,8 @@ def read_matrix():
         elif len(m1) != int(dim1[0]) or len(m1[0]) != int(dim1[1]):
             print("Error: Invalid input for the matrix")
         else:
-            add_matrix(m1, m2)
-            mult_matrix(m1, m2)
+            print(add_matrix(m1, m2))
+            print(mult_matrix(m1, m2))
 
     
 
