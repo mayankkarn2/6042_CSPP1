@@ -34,9 +34,11 @@ def add_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     row1 = len(m1)
+    print(row1)
     col1 = len(m1[0])
-    row2 = len(m1)
-    col2 = len(m1[0])
+    row2 = len(m2)
+    print(row2)
+    col2 = len(m2[0])
     if row1!=row2 or col1!=col2:
         print("Error: Matrix shapes invalid for addition")
         return "None"
