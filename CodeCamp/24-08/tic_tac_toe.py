@@ -31,15 +31,15 @@ def main():
 		for j in values:
 			temp.append(j)
 		grid.append(temp)
-	print(grid[0][0])
+	# print(grid[0][0])
 	winner = horizontal_check(grid)
-	print("HC", winner)
+	# print("HC", winner)
 	if winner == None:
 		winner = verical_check(grid)
-		print("VC", winner)
+		# print("VC", winner)
 	if winner == None:
 		winner = diagonal_check(grid)
-		print("DC", winner)
+		# print("DC", winner)
 	print(winner)
 
 if __name__ == '__main__':
