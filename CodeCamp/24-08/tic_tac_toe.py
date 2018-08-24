@@ -63,7 +63,10 @@ def main():
 			winner = verical_check(grid)
 		if winner == None:
 			winner = diagonal_check(grid)
-		print(winner)
+		if winner == None:
+			print("draw")
+		else:
+			print(winner)
 	else:
 		if not (is_valid_grid(grid)):
 			print("invalid input")
