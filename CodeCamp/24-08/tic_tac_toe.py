@@ -1,4 +1,7 @@
 def horizontal_check(grid):
+    ''' 
+        Checks if winner is in horizontal row
+    '''
     if grid[0][0] == grid[0][1] == grid[0][2]:
         return grid[0][0]
     if grid[1][0] == grid[1][1] == grid[1][2]:
