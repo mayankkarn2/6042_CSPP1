@@ -35,7 +35,7 @@ def is_valid_grid(grid):
     '''
     for inputs in grid:
         for j in inputs:
-            if j == 'x' or j == 'o' or j == '.':
+            if j in ('x', 'o', '.'):
                 pass
             else:
                 return False
