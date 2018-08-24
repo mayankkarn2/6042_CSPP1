@@ -1,5 +1,5 @@
 def horizontal_check(grid):
-    ''' 
+    '''
         Checks if winner is in horizontal row
     '''
     if grid[0][0] == grid[0][1] == grid[0][2]:
@@ -52,7 +52,7 @@ def is_valid_game(grid):
 def main():
     winner = None
     grid = []
-    for i in range(0, 3, 1):
+    for _ in range(0, 3, 1):
         values = input().split(' ')
         temp = []
         for j in values:
