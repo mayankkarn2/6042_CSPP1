@@ -61,11 +61,11 @@ def main():
     valid_grid = is_valid_grid(grid) and is_valid_game(grid)
     if valid_grid == True:
         winner = horizontal_check(grid)
-        if winner == None:
+        if winner is None:
             winner = verical_check(grid)
-        if winner == None:
+        if winner is None:
             winner = diagonal_check(grid)
-        if winner == None:
+        if winner is None:
             print("draw")
         else:
             print(winner)
