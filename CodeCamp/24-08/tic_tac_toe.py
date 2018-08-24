@@ -27,7 +27,7 @@ def is_valid_grid(grid):
                 pass
             else:
                 return False
-    return True 
+    return True
 
 def is_valid_game(grid):
     count_x = 0
@@ -40,8 +40,8 @@ def is_valid_game(grid):
             elif j == 'o':
                 count_o += 1
             elif j == '.':
-                count_dot += 1 
-    if abs(count_x - count_o >=2):
+                count_dot += 1
+    if abs(count_x - count_o >= 2):
         return False
     elif abs(count_x - count_o == 0) and count_dot > 0:
         return False
