@@ -67,9 +67,9 @@ def main():
         else:
             print(winner)
     else:
-        if not (is_valid_grid(grid)):
+        if not is_valid_grid(grid):
             print("invalid input")
-        if  not (is_valid_game(grid)):
+        if  not is_valid_game(grid):
             print("invalid game")
 
 if __name__ == '__main__':
