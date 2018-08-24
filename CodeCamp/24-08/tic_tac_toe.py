@@ -32,7 +32,7 @@ def is_valid_grid(grid):
 def is_valid_game(grid):
 	count_x = 0
 	count_o = 0
-	count_. = 0
+	count_dot = 0
 	for inputs in grid:
 		for j in inputs:
 			if j == 'x':
@@ -40,10 +40,10 @@ def is_valid_game(grid):
 			elif j == 'o':
 				count_o += 1
 			elif j == '.':
-				count_. += 1 
+				count_dot += 1 
 	if abs(count_x - count_o >=2):
 		return False
-	elif abs(count_x - count_o == 0) and count_. > 0:
+	elif abs(count_x - count_o == 0) and count_dot > 0:
 		return False
 	return True
 def main():
