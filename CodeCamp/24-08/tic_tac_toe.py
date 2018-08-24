@@ -53,9 +53,9 @@ def main():
 			temp.append(j)
 		grid.append(temp)
 	a = is_valid_grid(grid)
-	print("valid grid", a)
+	# print("valid grid", a)
 	b = is_valid_game(grid)
-	print("valid game", b)
+	# print("valid game", b)
 	valid_grid = is_valid_grid(grid) and is_valid_game(grid)
 	if valid_grid == True:
 		winner = horizontal_check(grid)
@@ -63,6 +63,7 @@ def main():
 			winner = verical_check(grid)
 		if winner == None:
 			winner = diagonal_check(grid)
+		print(winner)
 	else:
 		if not (is_valid_grid(grid)):
 			print("invalid input")
