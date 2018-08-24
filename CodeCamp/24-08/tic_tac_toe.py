@@ -61,11 +61,11 @@ def is_valid_game(grid):
                 count_o += 1
             elif j == '.':
                 count_dot += 1
-    if abs(count_x - count_o > 1):
-        return False
-    elif abs(count_x - count_o == 0) and count_dot > 0:
-        return False
-    return True
+    # if abs(count_x - count_o > 1):
+    #     return False
+    if abs(count_x - count_o) == 1 and count_dot == 0:
+        return True
+    return False
 def main():
     '''
         This is main function
