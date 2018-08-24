@@ -16,7 +16,6 @@ def verical_check(grid):
 
 def diagonal_check(grid):
 	if grid[0][0] == grid[1][1] == grid[2][2]:
-		print(grid[0][0])
 		return grid[0][0]
 	if grid[0][2] == grid[1][1] == grid[2][0]:
 		print("Here")
