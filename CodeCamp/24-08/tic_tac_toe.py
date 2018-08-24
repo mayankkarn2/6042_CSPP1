@@ -32,15 +32,18 @@ def is_valid_grid(grid):
 def is_valid_game(grid):
 	count_x = 0
 	count_o = 0
+	count_. = 0
 	for inputs in grid:
 		for j in inputs:
 			if j == 'x':
 				count_x += 1
 			elif j == 'o':
 				count_o += 1
-			else:
-				pass
+			elif j == '.':
+				count_. += 1 
 	if abs(count_x - count_o >=2):
+		return False
+	elif abs(count_x - count_o == 0) and count_. > 0:
 		return False
 	return True
 def main():
@@ -52,10 +55,6 @@ def main():
 		for j in values:
 			temp.append(j)
 		grid.append(temp)
-	a = is_valid_grid(grid)
-	# print("valid grid", a)
-	b = is_valid_game(grid)
-	# print("valid game", b)
 	valid_grid = is_valid_grid(grid) and is_valid_game(grid)
 	if valid_grid == True:
 		winner = horizontal_check(grid)
