@@ -65,7 +65,8 @@ def is_valid_game(grid):
     #     return False
     if abs(count_x - count_o) == 1 and count_dot == 0:
         return True
-    return False
+    else:
+        return False
 def main():
     '''
         This is main function
