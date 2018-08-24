@@ -12,7 +12,7 @@ def verical_check(grid):
 	if grid[0][1] == grid[1][1] == grid[2][1]:
 		return grid[0][1]
 	if grid[0][2] == grid[1][2] == grid[2][2]:
-		return grid[0][3]
+		return grid[0][2]
 
 def diagonal_check(grid):
 	if grid[0][0] == grid[1][1] == grid[2][2]:
