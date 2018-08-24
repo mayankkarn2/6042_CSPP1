@@ -20,6 +20,29 @@ def diagonal_check(grid):
 	if grid[0][2] == grid[1][1] == grid[2][0]:
 		return grid[0][2]
 
+def is_valid_grid(grid):
+	for inputs in grid:
+		for j in inputs:
+			if j == 'x' or j == 'o' or j == '.':
+				pass
+			else:
+				return False
+	return True 
+
+def is_valid_game(grid):
+	count_x = 0
+	count_o = 0
+	for inputs in grid:
+		for j in inputs:
+			if j == 'x':
+				count_x += 1
+			elif j == 'o':
+				count_o += 1
+			else:
+				pass
+	if abs(count_x - count_o >=2):
+		return False
+	return True
 def main():
 	winner = None
 	grid = []
@@ -29,16 +52,22 @@ def main():
 		for j in values:
 			temp.append(j)
 		grid.append(temp)
-	# print(grid[0][0])
-	winner = horizontal_check(grid)
-	# print("HC", winner)
-	if winner == None:
-		winner = verical_check(grid)
-		# print("VC", winner)
-	if winner == None:
-		winner = diagonal_check(grid)
-		# print("DC", winner)
-	print(winner)
+	a = is_valid_grid(grid)
+	print("valid grid", a)
+	b = is_valid_game(grid)
+	print("valid game", b)
+	valid_grid = is_valid_grid(grid) and is_valid_game(grid)
+	if valid_grid == True:
+		winner = horizontal_check(grid)
+		if winner == None:
+			winner = verical_check(grid)
+		if winner == None:
+			winner = diagonal_check(grid)
+	else:
+		if not (is_valid_grid(grid)):
+			print("invalid input")
+		if  not (is_valid_game(grid)):
+			print("invalid game")
 
 if __name__ == '__main__':
 	main()
