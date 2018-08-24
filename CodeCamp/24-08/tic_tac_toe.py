@@ -10,6 +10,9 @@ def horizontal_check(grid):
         return grid[2][0]
 
 def verical_check(grid):
+    '''
+        Checks if winner is in vertical row
+    '''
     if grid[0][0] == grid[1][0] == grid[2][0]:
         return grid[0][0]
     if grid[0][1] == grid[1][1] == grid[2][1]:
@@ -18,12 +21,18 @@ def verical_check(grid):
         return grid[0][2]
 
 def diagonal_check(grid):
+    '''
+        Checks if winner is in diagonal row
+    '''
     if grid[0][0] == grid[1][1] == grid[2][2]:
         return grid[0][0]
     if grid[0][2] == grid[1][1] == grid[2][0]:
         return grid[0][2]
 
 def is_valid_grid(grid):
+    '''
+        Checks if the grid is valid
+    '''
     for inputs in grid:
         for j in inputs:
             if j == 'x' or j == 'o' or j == '.':
@@ -33,6 +42,9 @@ def is_valid_grid(grid):
     return True
 
 def is_valid_game(grid):
+    '''
+        Checks if game is valid
+    '''
     count_x = 0
     count_o = 0
     count_dot = 0
@@ -50,6 +62,9 @@ def is_valid_game(grid):
         return False
     return True
 def main():
+    '''
+        This is main function
+    '''
     winner = None
     grid = []
     for _ in range(0, 3, 1):
