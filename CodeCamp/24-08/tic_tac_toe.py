@@ -49,7 +49,7 @@ def is_valid_game(grid):
 def main():
     winner = None
     grid = []
-    for i in range(0,3,1):
+    for i in range(0, 3, 1):
         values = input().split(' ')
         temp = []
         for j in values:
