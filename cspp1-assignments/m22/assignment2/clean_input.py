@@ -4,7 +4,7 @@ alphabets in both upper and lower case and numbers.
 '''
 import re
 def clean_string(string):
-    ''' 
+    '''
         Cleans up all special characeters
         Input = string
         returns string
@@ -19,6 +19,9 @@ def clean_string(string):
     return out_str
 
 def main():
+    '''
+        This is main function
+    '''
     string = input()
     print(clean_string(string))
 
