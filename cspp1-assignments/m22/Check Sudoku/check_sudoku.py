@@ -54,9 +54,9 @@ def row_check(sudoku):
             return False
     return True
 def col_check(sudoku):
-    for i in range(0,9,1):
+    for i in range(0, 9, 1):
         lis = []
-        for j in range(0,9,1):
+        for j in range(0, 9, 1):
             lis.append(sudoku[j][i])
         dicti = Counter(lis)
         if len(dicti) == 9:
