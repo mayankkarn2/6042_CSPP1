@@ -7,7 +7,10 @@ def main():
     lines = int(input())
     for _ in range(lines):
         str_list = input().split("\n")
-        string = string + "\n" + ''.join(str_list)
+        if _ == 0:
+            string = ''.join(str_list)
+        else:
+            string = string + "\n" + ''.join(str_list)
     print(string)
 if __name__ == '__main__':
     main()
