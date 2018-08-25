@@ -19,7 +19,7 @@ def main():
             str_1 = str_1 + string
         else:
             str_1 = str_1 + " " + string
-    regex = re.compile('[^ a-zA-Z]+')
+    regex = re.compile('[^ a-zA-Z0-9]+')
     string_c = ''
     for letter in str_1:
         letter = regex.sub("", letter)
