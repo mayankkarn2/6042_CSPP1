@@ -6,7 +6,7 @@ import re
 from collections import Counter
 def tokenize(string):
     str_list = string.split()
-    print(str_list)
+    # print(str_list)
     dic = dict(Counter(str_list))
     return dic
             
