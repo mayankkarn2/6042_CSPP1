@@ -5,12 +5,20 @@ each word
 import re
 from collections import Counter
 def tokenize(string):
+    '''
+        This function returns the frequency
+        of values
+    '''
     str_list = string.split()
     # print(str_list)
     dic = dict(Counter(str_list))
     return dic
-            
+
 def main():
+    '''
+        This is main function
+        Here we tokenize the string
+    '''
     lines = int(input())
     str_1 = ''
     for i in range(0, lines, 1):
