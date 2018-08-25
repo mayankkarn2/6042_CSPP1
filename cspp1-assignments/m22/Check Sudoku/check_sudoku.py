@@ -36,6 +36,9 @@ def check_sudoku(sudoku):
     #     return False
 
 def range_check(sudoku):
+    '''
+        Checks if the given range is valid
+    '''
     for row in sudoku:
         for number in row:
             if int(number) >= 1 and int(number) <= 9:
@@ -44,6 +47,9 @@ def range_check(sudoku):
                 return False
     return True
 def row_check(sudoku):
+    '''
+        Checks if the rows are valid
+    '''
     for row in sudoku:
         # print(row)
         dicti = Counter(row)
@@ -54,6 +60,9 @@ def row_check(sudoku):
             return False
     return True
 def col_check(sudoku):
+    '''
+        Checks if the colums are valid
+    '''
     for i in range(0, 9, 1):
         lis = []
         for j in range(0, 9, 1):
@@ -64,7 +73,6 @@ def col_check(sudoku):
         else:
             return False
     return True
-    
 
 def main():
     '''
@@ -76,7 +84,7 @@ def main():
     sudoku = []
 
     # loop to read 9 lines of input from console
-    for i in range(9):
+    for _ in range(9):
         # read a line, split it on SPACE and append row to list
         row = input().split(' ')
         sudoku.append(row)
