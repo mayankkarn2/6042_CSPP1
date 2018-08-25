@@ -15,12 +15,16 @@ def main():
     str_1 = ''
     for i in range(0, lines, 1):
         string = input()
-        str_1 = str_1 + string
+        if i == 0:
+            str_1 = str_1 + string
+        else:
+            str_1 = str_1 + " " + string
     regex = re.compile('[^ a-zA-Z]+')
     string_c = ''
     for letter in str_1:
         letter = regex.sub("", letter)
         string_c = string_c + letter
+    # print(string_c)
     print(tokenize(string_c))
 
 if __name__ == '__main__':
