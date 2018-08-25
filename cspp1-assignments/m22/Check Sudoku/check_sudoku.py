@@ -20,8 +20,20 @@ def check_sudoku(sudoku):
             is_valid_col = col_check(sudoku)
             if is_valid_col is True:
                 return True
+            else:
+                return False
+        else:
+            return False
     else:
         return False
+        # print(is_valid_row)
+        # if is_valid_row is True:
+        #     is_valid_col = col_check(sudoku)
+        #     print(is_valid_col)
+        #     if is_valid_col is True:
+        #         return True
+    # else:
+    #     return False
 
 def range_check(sudoku):
     for row in sudoku:
