@@ -4,6 +4,11 @@ frequency of each word. Display the frequency values using “#” as a text bas
 '''
 
 def frequency_graph(dictionary):
+    '''
+        Displays the frequency using "#" as text based graph"
+        Input a dictionary
+        Outputs a string
+    '''
     keys = sorted(dictionary.keys())
     for key in keys:
         hash_count = int(dictionary[key])
@@ -11,13 +16,21 @@ def frequency_graph(dictionary):
         hashes_p = generate_hashes(hash_count)
         print(key, "-", hashes_p)
 def generate_hashes(hash_count):
+    '''
+        Generates the number of "#"
+        Inputs a integer
+        Outsputs a string
+    '''
     string = ''
-    for i in range(1,hash_count+1,1):
+    for _ in range(1, hash_count+1, 1):
         string = string + "#"
         # print(string)
     return string
 
 def main():
+    '''
+        This is the main funtion
+    '''
     dictionary = eval(input())
     frequency_graph(dictionary)
 
